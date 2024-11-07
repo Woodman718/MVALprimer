@@ -1,3 +1,4 @@
+# Ignore CodeIgniter 3 specific files and folders
 */config/development
 */logs/log-*.php
 !*/logs/index.html
@@ -6,13 +7,49 @@
 !*/cache/index.html
 !*/cache/.htaccess
 
+# Ignore user guide source and build directories
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 
-#codeigniter 3
+# CodeIgniter logs (preserve index.html and .htaccess)
 application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
-/vendor/
+
+# Vendor directory (for Composer or other package managers)
+vendor/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/editor specific directories and files
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Backup files (e.g. from text editors)
+*~
+*.bak
+
+# Node.js dependencies (if applicable)
+node_modules/
+
+# Ignore common binary file formats
+*.zip
+*.tar.gz
+*.7z
+*.tgz
+*.gz
+
+# Ignore system and user-specific config files
+*.sublime-workspace
+*.sublime-project
