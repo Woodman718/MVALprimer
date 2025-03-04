@@ -19,7 +19,7 @@ sci_hub_processing/
 ```
 ## Processing Flowchart
 
-Below is the flowchart of the Sci-Hub processing steps:
+Below is the flowchart of the processing steps:
 
 ![SCI_HUB Processing Flowchart](./docs/SCI_HUB_Processing_Flowchart.png)
 
@@ -29,25 +29,51 @@ Below is the flowchart of the Sci-Hub processing steps:
 ### 1. Checking Sci-Hub Compressed Files
 
 - **echo_num.sh**: Counts the number of files in subdirectories.
-- **move_file.sh**: Moves files based on certain criteria.
+- **move_file.sh**: Moves files based on specified criteria.
 
 ### 2. From scimag.sql to file_path.txt
 
 - **Sql_cnn.py**: Connects to the MySQL database and generates `data.tsv`.
 - **Doi_Percent.py**: Calculates the percentage of matching DOIs.
-- **ConstureZip.py**: Generates the list of zip files to extract.
-- **mv_unzip.py**: Moves and extracts the required zip files.
+- **ConstureZip.py**:  Generates a list of zip files for extraction.
+- **mv_unzip.py**: Moves and extracts target zip files.
 - **zip_ex.sh**: Extracts zip files.
-- **map_files.py**: Generates the list of PDF files to process.
+- **map_files.py**: Generates a PDF processing file list.
 
 ### 3. From PDF to summary.tsv
 
-- **pdf_search_v7.py**: Extracts information from PDFs and generates `summary.tsv`.
+- **pdf_search_v7.py**: Extracts metadata from PDFs and generates `summary.tsv`.
 
 ## Usage
 
-### Step 1: Check Sci-Hub Compressed Files
-This step involves checking the compressed files within the Sci-Hub directories. It takes two parameters: the path to the parent directory and the path to the output directory. The process filters files and then counts the number of zip archives within the subdirectories. Empty directories are moved to the `zero` directory, and directories containing between 0 and 100 items are moved to the `residue` directory.
+### Step 1: Validate Sci-Hub Compressed Files
+
+This step validates compressed files within Sci-Hub directories. It accepts two parameters:
+
+- **`parent_dir`**: Path to the parent directory  
+  Example: `/scihub/data/raw`
+- **`output_dir`**: Path to the output directory  
+  Example: `/scihub/processed`
+
+The process filters files and counts zip archives in subdirectories:
+
+```bash
+# Sample directory structure after processing
+├── parent_dir
+│   ├── subdir1
+│   │   └── valid.zip
+│   └── subdir2
+│       └── empty
+└── output_dir
+    ├── zero
+    │   └── subdir2
+    └── residue
+        └── subdir1
+```
+The process filters files and counts zip archives in subdirectories:
+- **Empty directories**  are moved to __/zero__.
+- **Directories with 0–100** files are moved to __/residue__.
+
 ```bash
 ./scripts/echo_num.sh gao/mqi_1/
 ./scripts/move_file.sh gao/mqi_1/ .
