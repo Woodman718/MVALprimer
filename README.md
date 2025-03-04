@@ -56,7 +56,7 @@ This flowchart provides a visual representation of the steps involved in process
 
 ### Step 2: From scimag.sql to file_path.txt
 
-1. **Install MySQL and import scimag.sql**
+1. **Import scimag.sql(31G)**
 
    ```bash
    mysql -u root -p < data/input/scimag.sql
