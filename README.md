@@ -1,4 +1,22 @@
 # SCI_HUB Processing
+This repository contains scripts and data for processing SCI_HUB data, including checking compressed files, generating file paths, and extracting summaries from PDFs.
+## Directory Structure
+```plaintext
+sci_hub_processing/
+├── scripts/
+│   ├── echo_num.sh
+│   ├── move_file.sh
+│   ├── Sql_cnn.py
+│   ├── Doi_Percent.py
+│   ├── ConstureZip.py
+│   ├── mv_unzip.py
+│   ├── zip_ex.sh
+│   ├── map_files.py
+│   └── pdf_search_v7.py
+├── docs/
+│   ├── ReadMe.md
+│   └── SCI_HUB_Processing_Flowchart.png
+```
 ## Processing Flowchart
 
 Below is the flowchart of the SCI_HUB processing steps:
