@@ -1,5 +1,5 @@
 # Sci-Hub Processing
-This repository contains scripts and data for processing SCI_HUB data, including checking compressed files, generating file paths, and extracting summaries from PDFs.
+This repository contains scripts and data for processing Sci-Hub data, including checking compressed files, generating file paths, and extracting summaries from PDFs.
 ## Directory Structure
 ```plaintext
 sci_hub_processing/
@@ -19,15 +19,15 @@ sci_hub_processing/
 ```
 ## Processing Flowchart
 
-Below is the flowchart of the SCI_HUB processing steps:
+Below is the flowchart of the Sci-Hub processing steps:
 
 ![SCI_HUB Processing Flowchart](./docs/SCI_HUB_Processing_Flowchart.png)
 
-This flowchart provides a visual representation of the steps involved in processing SCI_HUB data, from uploading the initial files to extracting primer sequences from PDFs.
+This flowchart provides a visual representation of the steps involved in processing Sci-Hub data, from uploading the initial files to extracting primer sequences from PDFs.
 
 ## Scripts
 
-### 1. Checking SCI_HUB Compressed Files
+### 1. Checking Sci-Hub Compressed Files
 
 - **echo_num.sh**: Counts the number of files in subdirectories.
 - **move_file.sh**: Moves files based on certain criteria.
@@ -47,8 +47,8 @@ This flowchart provides a visual representation of the steps involved in process
 
 ## Usage
 
-### Step 1: Check SCI_HUB Compressed Files
-This step involves checking the compressed files within the SCI_HUB directories. It takes two parameters: the path to the parent directory and the path to the output directory. The process filters files and then counts the number of zip archives within the subdirectories. Empty directories are moved to the `zero` directory, and directories containing between 0 and 100 items are moved to the `residue` directory.
+### Step 1: Check Sci-Hub Compressed Files
+This step involves checking the compressed files within the Sci-Hub directories. It takes two parameters: the path to the parent directory and the path to the output directory. The process filters files and then counts the number of zip archives within the subdirectories. Empty directories are moved to the `zero` directory, and directories containing between 0 and 100 items are moved to the `residue` directory.
 ```bash
 ./scripts/echo_num.sh gao/mqi_1/
 ./scripts/move_file.sh gao/mqi_1/ .
