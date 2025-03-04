@@ -1,4 +1,11 @@
 # SCI_HUB Processing
+## Processing Flowchart
+
+Below is the flowchart of the SCI_HUB processing steps:
+
+![SCI_HUB Processing Flowchart](./docs/SCI_HUB_Processing_Flowchart.png)
+
+This flowchart provides a visual representation of the steps involved in processing SCI_HUB data, from uploading the initial files to extracting primer sequences from PDFs.
 
 ## Scripts
 
