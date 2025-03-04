@@ -110,5 +110,3 @@ This flowchart provides a visual representation of the steps involved in process
 ```bash
 python scripts/pdf_search_v7.py
 ```
-
-This integration provides a clear and detailed explanation of the `pdf_search_v7.py` script's functionality within the context of your project's usage instructions.
