@@ -1,5 +1,5 @@
 # Sci-Hub Processing
-This repository contains scripts and data for processing Sci-Hub data, including checking compressed files, generating file paths, and extracting summaries from PDFs.
+This repository contains scripts and data for processing Sci-Hub data, including checking compressed files, generating file paths, and extracting primers from PDFs.
 ## Directory Structure
 ```plaintext
 sci_hub_processing/
