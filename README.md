@@ -48,7 +48,7 @@ This flowchart provides a visual representation of the steps involved in process
 ## Usage
 
 ### Step 1: Check SCI_HUB Compressed Files
-
+This step involves checking the compressed files within the SCI_HUB directories. It takes two parameters: the path to the parent directory and the path to the output directory. The process filters files and then counts the number of zip archives within the subdirectories. Empty directories are moved to the `zero` directory, and directories containing between 0 and 100 items are moved to the `residue` directory.
 ```bash
 ./scripts/echo_num.sh gao/mqi_1/
 ./scripts/move_file.sh gao/mqi_1/ .
