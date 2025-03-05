@@ -56,8 +56,8 @@ This step validates compressed files within Sci-Hub directories. It accepts two 
   Example: `/scihub/processed`
 
 The process filters files and counts zip archives in subdirectories:
-- **Empty directories**  are moved to __/zero__.
-- **Directories with 0–100** files are moved to __/residue__.
+- **Empty directories** are moved to __/zero__.
+- **Directories with [0,100)** files are moved to __/residue__.
 
 ```bash
 ./scripts/echo_num.sh gao/mqi_1/
