@@ -56,21 +56,6 @@ This step validates compressed files within Sci-Hub directories. It accepts two 
   Example: `/scihub/processed`
 
 The process filters files and counts zip archives in subdirectories:
-
-```bash
-# Sample directory structure after processing
-├── parent_dir
-│   ├── subdir1
-│   │   └── valid.zip
-│   └── subdir2
-│       └── empty
-└── output_dir
-    ├── zero
-    │   └── subdir2
-    └── residue
-        └── subdir1
-```
-The process filters files and counts zip archives in subdirectories:
 - **Empty directories**  are moved to __/zero__.
 - **Directories with 0–100** files are moved to __/residue__.
 
