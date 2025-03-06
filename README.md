@@ -14,7 +14,6 @@ sci_hub_processing/
 │   ├── map_files.py
 │   └── pdf_search_v7.py
 ├── docs/
-│   ├── ReadMe.md
 │   └── SCI_HUB_Processing_Flowchart.png
 ```
 ## Processing Flowchart
