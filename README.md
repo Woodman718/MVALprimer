@@ -37,7 +37,7 @@ Below is the flowchart of the processing steps:
 - **Doi_Percent.py**: Calculates the percentage of matching DOIs.
 - **ConstureZip.py**:  Generates a list of zip files for extraction.
 - **mv_unzip.py**: Moves and extracts target zip files.
-- **zip_ex.sh**: Extracts zip files.
+- **zip_ex.sh**: Extracts zip files using 4 threads by default (e.g., unzip with parallel processing via -j 4).
 - **map_files.py**: Generates a PDF processing file list.
 
 ### 3. From PDF to summary.tsv
