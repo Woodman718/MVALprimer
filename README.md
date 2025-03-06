@@ -109,13 +109,39 @@ The process filters files and counts zip archives in subdirectories:
    ```
 
 ### Step 3: From PDF to summary.tsv
-1. Import necessary libraries and settings: Import necessary libraries such as os, time, re, csv, pandas, and PyMuPDF (fitz). Also, set up configurations such as pdf2doi library settings.
-2. DOI transformation and processing: Define a series of functions to transform and process DOIs. The transform_doi function is used to convert a given DOI into a standard format; escape_doi and unescape_doi functions are for escaping and unescaping DOIs.
-3. Read PDF file list: Define a function read_pdf_list to read a file containing a list of PDF file paths.
-4. Check PDF file validity: Use the PyMuPDF (fitz) library to check the validity of PDF files, including file size, number of pages, and text length.
-5. Extract italic text and Primer sequences: Implement a series of functions to extract italic text and Primer sequences from PDF files. These functions use the PyMuPDF (fitz) library to process PDF files. Based on specified regular expression patterns, extract italic text and Primer sequences from the text of each page.
-6. Process PDF files: Implement a main function process_pdf_files, which accepts a list of PDF files, an output directory, and an object (e.g., root) as parameters, and processes each PDF file. For each PDF file, it checks its validity, then extracts DOI, italic text, and Primer sequences, and writes the results to the corresponding output file.
-7. Execute the main program: In the __main__ section, specify the path to the input file (PDF file list), the path to the output directory, and call the process_pdf_files function to process the PDF files.
+1. **Import necessary libraries and configure settings**  
+   Import libraries (`os`, `time`, `re`, `csv`, `pandas`, `PyMuPDF/fitz`) and configure `pdf2doi` settings.
+
+2. **DOI transformation and processing**  
+   Define functions to handle DOIs:  
+   - `transform_doi`: Standardize DOI format.  
+   - `escape_doi`/`unescape_doi`: Escape special characters in DOIs and revert them.
+
+3. **Read PDF file list**  
+   Implement `read_pdf_list` to load a list of PDF file paths from a specified input file.
+
+4. **Validate PDF files**  
+   Use `PyMuPDF (fitz)` to check:  
+   - File size limits.  
+   - Page count validity.  
+   - Minimum text length per page.
+
+5. **Extract italic text and primer sequences**  
+   Extract content via `PyMuPDF (fitz)` and regex patterns:  
+   - **Italic text**: Identify text with italic formatting.  
+   - **Primer sequences**: Match sequences using regular expressions.
+
+6. **Process PDF files**  
+   Run `process_pdf_files` to:  
+   - Accept input (PDF list, output directory, optional parameters like `root`).  
+   - Validate files.  
+   - Extract DOI, italic text, and primer sequences.  
+   - Write results to `summary.tsv`.
+
+7. **Execute the main program**  
+   In `__main__`:  
+   - Set input file path and output directory.  
+   - Call `process_pdf_files` to generate the final output.
 
 ```bash
 python scripts/pdf_search_v7.py
